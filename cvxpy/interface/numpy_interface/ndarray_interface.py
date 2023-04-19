@@ -44,7 +44,7 @@ class NDArrayInterface(base.BaseMatrixInterface):
         elif isinstance(value, numpy.matrix):
             result = value.A
         elif isinstance(value, list):
-            result = numpy.asarray(value).T
+            result = numpy.asarray(value)
         else:
             result = numpy.asarray(value)
         if result.dtype in [complex, numpy.float64]:
